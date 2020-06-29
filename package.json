@@ -1,0 +1,11 @@
+{
+  "name": "input-bound",
+  "version": "1.0.0",
+  "description": "Web Component for a range input with a lower and upper bound slider",
+  "main": "input-bound.js",
+  "type": "module",
+  "module": "input-bound.js",
+  "types": "input-bound.d.ts",
+  "author": "Simon Madine <simon@thingsinjars.com>",
+  "license": "MIT"
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>InputRange</title>
+  <script type="module" src="index.js"></script>
+</head>
+<body>
+  <input-bound min="-10" max="5" lower="-3" upper="3" step="1"></input-bound>
+  <ul>
+    <li>onInput:
+      <p>Lower: <span id="input-lower">-3</span>, Upper: <span id="input-upper">3</span></p>
+    </li>
+    <li>onChange:
+      <p>Lower: <span id="change-lower">-3</span>, Upper: <span id="change-upper">3</span></p>
+    </li>
+  </ul>
+<script>
+  document.querySelector('input-bound').addEventListener('change', (e) => {
+    document.querySelector('#change-lower').innerHTML = e.target.lower;
+    document.querySelector('#change-upper').innerHTML = e.target.upper;
+  });
+  document.querySelector('input-bound').addEventListener('input', (e) => {
+    document.querySelector('#input-lower').innerHTML = e.target.lower;
+    document.querySelector('#input-upper').innerHTML = e.target.upper;
+  });
+</script>
+</body>
+</html>
